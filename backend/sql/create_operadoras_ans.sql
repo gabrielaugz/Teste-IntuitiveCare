@@ -1,0 +1,23 @@
+CREATE TABLE operadoras_ans (
+    id SERIAL PRIMARY KEY,
+    registro_ans VARCHAR(50),
+    cnpj VARCHAR(20),
+    razao_social VARCHAR(200),
+    nome_fantasia VARCHAR(200),
+    modalidade VARCHAR(100),
+    logradouro VARCHAR(200),
+    numero VARCHAR(20),
+    complemento VARCHAR(100),
+    bairro VARCHAR(100),
+    cidade VARCHAR(100),
+    uf VARCHAR(2),
+    cep VARCHAR(10),
+    ddd VARCHAR(10),
+    telefone VARCHAR(20),
+    fax VARCHAR(20),
+    endereco_eletronico VARCHAR(200),
+    representante VARCHAR(200),
+    cargo_representante VARCHAR(100),
+    regiao_comercializacao VARCHAR(10),
+    data_registro_ans DATE
+);
