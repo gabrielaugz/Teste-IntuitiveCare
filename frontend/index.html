@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operadoras Ativas</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Lista de Operadoras Ativas</h1>
+        <input v-model="search" placeholder="Filtre por nome ou CNPJ" class="search-input">
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Razão Social</th>
+                    <th>CNPJ</th>
+                    <th>Região de Comercialização</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="operadora in filteredOperadoras" :key="operadora.id">
+                    <td>{{ operadora.razao_social }}</td>
+                    <td>{{ operadora.cnpj }}</td>
+                    <td>{{ operadora.regiao_comercializacao }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
